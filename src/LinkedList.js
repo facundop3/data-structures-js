@@ -5,7 +5,12 @@ class LinkedList {
   }
 
   addHead(value) {
-    this.head = new Node(value, this.head, null);
+    const newHead = new Node(value, this.head, null);
+    if (this.head) {
+      this.head.prevNode = newHead;
+    } else {
+      this.tail = newHead;
+    }
   }
 
   //   getTail(){
