@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1563820141205" clover="3.2.0">
-  <project timestamp="1563820141205" name="All files">
-    <metrics statements="48" coveredstatements="48" conditionals="18" coveredconditionals="18" methods="9" coveredmethods="9" elements="75" coveredelements="75" complexity="0" loc="48" ncloc="48" packages="1" files="1" classes="1"/>
+<coverage generated="1563831726511" clover="3.2.0">
+  <project timestamp="1563831726512" name="All files">
+    <metrics statements="75" coveredstatements="75" conditionals="43" coveredconditionals="43" methods="13" coveredmethods="13" elements="131" coveredelements="131" complexity="0" loc="75" ncloc="75" packages="1" files="2" classes="2"/>
+    <file name="BinaryTree.js" path="/mnt/c/Users/fpetre/code/data-structures-js/src/BinaryTree.js">
+      <metrics statements="27" coveredstatements="27" conditionals="25" coveredconditionals="25" methods="4" coveredmethods="4"/>
+      <line num="3" count="15" type="stmt"/>
+      <line num="4" count="15" type="stmt"/>
+      <line num="5" count="15" type="stmt"/>
+      <line num="9" count="21" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="12" count="19" type="cond" truecount="2" falsecount="0"/>
+      <line num="13" count="18" type="cond" truecount="2" falsecount="0"/>
+      <line num="14" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="15" count="5" type="stmt"/>
+      <line num="17" count="3" type="stmt"/>
+      <line num="20" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="21" count="6" type="stmt"/>
+      <line num="23" count="4" type="stmt"/>
+      <line num="30" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="31" count="8" type="cond" truecount="2" falsecount="0"/>
+      <line num="32" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="37" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="38" count="4" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="45" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="46" count="2" type="stmt"/>
+      <line num="48" count="6" type="stmt"/>
+      <line num="49" count="6" type="cond" truecount="2" falsecount="0"/>
+      <line num="50" count="3" type="stmt"/>
+      <line num="55" count="1" type="stmt"/>
+    </file>
     <file name="LinkedList.js" path="/mnt/c/Users/fpetre/code/data-structures-js/src/LinkedList.js">
       <metrics statements="48" coveredstatements="48" conditionals="18" coveredconditionals="18" methods="9" coveredmethods="9"/>
       <line num="3" count="10" type="stmt"/>

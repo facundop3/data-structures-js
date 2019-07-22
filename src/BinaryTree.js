@@ -7,7 +7,7 @@ class BinaryTree {
 
   addValue(value) {
     if (this.root === null) {
-      this.root = new BinaryTree(value);
+      this.root = value;
     } else {
       if (this.root === value) return false;
       if (this.root > value) {
@@ -38,6 +38,19 @@ class BinaryTree {
         return this.right.contains(value);
       }
       return false;
+    }
+  }
+
+  depthFirstTraversal(iteratorFunction, order = "inOrder") {
+    if (order === "preOrder") {
+      iteratorFunction(this.root);
+    }
+    if (this.left !== null) {
+      this.left.depthFirstTraversal(iteratorFunction, order);
+    }
+    order === "inOrder" && iteratorFunction(this.root);
+    if (this.right) {
+      this.right.depthFirstTraversal(iteratorFunction, order);
     }
   }
 }

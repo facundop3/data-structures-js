@@ -1,3 +1,4 @@
-#Basic data structures with js
+## Basic data structures with js
 
 - LinkedList
+- BinaryTree
