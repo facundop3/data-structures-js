@@ -4,26 +4,25 @@ class LinkedList {
     this.tail = null;
   }
 
-  addHead(value) {
+  addToHead(value) {
     const newHead = new Node(value, this.head, null);
     if (this.head) {
       this.head.prevNode = newHead;
     } else {
       this.tail = newHead;
     }
+    this.head = newHead;
   }
 
-  //   getTail(){
-  //       if(this.head !== null){
-  //         if(this.head.nextNode!== null){
-  //             return this.head.nextNode
-  //         } else {
-  //             return this.head
-  //         }
-  //       }else {
-  //           return null
-  //       }
-  //   }
+  addToTail(value) {
+    const newTailObject = new Node(value, null, this.tail);
+    if (this.tail) {
+      this.tail.nextNode = newTailObject;
+    } else {
+      this.head = newTailObject;
+    }
+    this.tail = newTailObject;
+  }
 }
 
 class Node {
