@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "author": "@facundop3",
   "license": "ISC",
   "dependencies": {
+    "jest-cli": "^24.8.0",
     "nodemon": "^1.19.1"
   },
   "devDependencies": {

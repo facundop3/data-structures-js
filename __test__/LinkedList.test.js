@@ -57,6 +57,7 @@ test("Test removeHead", () => {
   testLinkedList.addToHead(1);
   testLinkedList.removeHead();
   expect(testLinkedList).toEqual(brandNewLinkedList);
+  expect(testLinkedList.removeHead()).toBe(false);
   testLinkedList.addToHead(1);
   testLinkedList.addToHead(2);
   testLinkedList.addToHead(3);
@@ -71,6 +72,7 @@ test("Test removeTail", () => {
   testLinkedList.addToHead(1);
   testLinkedList.removeTail();
   expect(testLinkedList).toEqual(brandNewLinkedList);
+  expect(testLinkedList.removeTail()).toBe(false);
   testLinkedList.addToHead(1);
   testLinkedList.addToTail("to delete");
   testLinkedList.removeTail();
