@@ -50,3 +50,43 @@ test("Test addToTail ", () => {
   expect(testLinkedList.head.nextNode).toEqual(testLinkedList.tail);
   expect(testLinkedList.head.prevNode).toBe(null);
 });
+
+test("Test removeHead", () => {
+  const brandNewLinkedList = new LinkedList();
+  const testLinkedList = new LinkedList();
+  testLinkedList.addToHead(1);
+  testLinkedList.removeHead();
+  expect(testLinkedList).toEqual(brandNewLinkedList);
+  testLinkedList.addToHead(1);
+  testLinkedList.addToHead(2);
+  testLinkedList.addToHead(3);
+  testLinkedList.removeHead();
+  expect(testLinkedList.head.value).toBe(2);
+  expect(testLinkedList.head.nextNode.value).toBe(1);
+});
+
+test("Test removeTail", () => {
+  const brandNewLinkedList = new LinkedList();
+  const testLinkedList = new LinkedList();
+  testLinkedList.addToHead(1);
+  testLinkedList.removeTail();
+  expect(testLinkedList).toEqual(brandNewLinkedList);
+  testLinkedList.addToHead(1);
+  testLinkedList.addToTail("to delete");
+  testLinkedList.removeTail();
+  expect(testLinkedList.head.value).toBe(1);
+  expect(testLinkedList.tail.value).toBe(1);
+});
+
+test("Test searchValue", () => {
+  const testLinkedList = new LinkedList();
+  const valueToFind = "Value to find";
+  testLinkedList.addToHead(1);
+  testLinkedList.addToHead(2);
+  testLinkedList.addToHead(3);
+  testLinkedList.addToHead(4);
+  testLinkedList.addToTail(valueToFind);
+  expect(testLinkedList.searchValue(valueToFind).value).toBe(valueToFind);
+  testLinkedList.removeTail();
+  expect(testLinkedList.searchValue(valueToFind).value).toBeFalsy();
+});
