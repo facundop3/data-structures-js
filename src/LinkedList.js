@@ -55,6 +55,31 @@ class LinkedList {
     }
     return false;
   }
+  indexOf(value) {
+    let currentNode = this.head;
+    let count = 0;
+    let indexs = [];
+    while (currentNode) {
+      if (currentNode.value === value) {
+        indexs.push(count);
+      }
+      count++;
+      currentNode = currentNode.nextNode;
+    }
+
+    return indexs;
+  }
+  firstIndexOf(value) {
+    let currentNode = this.head;
+    let count = 0;
+    while (currentNode) {
+      if (currentNode.value === value) {
+        return count;
+      }
+      count++;
+      currentNode = currentNode.nextNode;
+    }
+  }
 }
 class Node {
   constructor(value, nextNode, prevNode) {

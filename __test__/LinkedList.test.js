@@ -90,3 +90,25 @@ test("Test searchValue", () => {
   testLinkedList.removeTail();
   expect(testLinkedList.searchValue(valueToFind).value).toBeFalsy();
 });
+
+test("Test firstIndexOf", () => {
+  const testLinkedList = new LinkedList();
+  const valueToFind = "value to find";
+  testLinkedList.addToHead(valueToFind);
+  expect(testLinkedList.firstIndexOf(valueToFind)).toBe(0);
+  testLinkedList.addToHead(1);
+  testLinkedList.addToHead(2);
+  expect(testLinkedList.firstIndexOf(valueToFind)).toBe(2);
+});
+
+test("Test indexOf", () => {
+  const testLinkedList = new LinkedList();
+  const valueToFind = "value to find";
+  testLinkedList.addToHead(5);
+  testLinkedList.addToHead(valueToFind);
+  testLinkedList.addToHead(3);
+  testLinkedList.addToHead(valueToFind);
+  testLinkedList.addToHead(1);
+  testLinkedList.addToHead(0);
+  expect(testLinkedList.indexOf(valueToFind)).toEqual([2, 4]);
+});
