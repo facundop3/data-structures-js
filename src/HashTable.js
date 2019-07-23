@@ -47,7 +47,30 @@ class HashTable {
 
   get(key) {
     const index = this.getNotAHash(key);
-    return this.buckets[index];
+    if (!this.buckets[index]) {
+      return null;
+    } else {
+      let currentNode = this.buckets[index];
+      while (currentNode) {
+        if (currentNode.key === key) {
+          return currentNode.value;
+        }
+        currentNode = currentNode.next;
+      }
+      return null;
+    }
+  }
+
+  retriveAll() {
+    const allNodes = [];
+    this.buckets.forEach(bucket => {
+      let currentNode = bucket;
+      while (currentNode) {
+        allNodes.push(currentNode);
+        currentNode = currentNode.next;
+      }
+    });
+    return allNodes;
   }
 }
 module.exports = { HashTable };

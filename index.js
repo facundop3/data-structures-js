@@ -11,3 +11,4 @@ test.insert("oFacund", 103);
 
 console.log("get value", test.get("oFacund").value);
 console.log(test);
+console.log(test.retriveAll());
