@@ -42,9 +42,8 @@ class BinaryTree {
   }
 
   depthFirstTraversal(iteratorFunction, order = "inOrder") {
-    if (order === "preOrder") {
-      iteratorFunction(this.root);
-    }
+    order === "preOrder" && iteratorFunction(this.root);
+
     if (this.left !== null) {
       this.left.depthFirstTraversal(iteratorFunction, order);
     }
@@ -52,6 +51,30 @@ class BinaryTree {
     if (this.right) {
       this.right.depthFirstTraversal(iteratorFunction, order);
     }
+    order === "postOrder" && iteratorFunction(this.root);
+  }
+
+  breadthFirstTraversal(iteratorFunction) {
+    const queue = [this];
+    while (queue.length) {
+      const treeNode = queue.shift();
+      iteratorFunction(treeNode);
+      treeNode.right && queue.push(treeNode.right);
+      treeNode.left && queue.push(treeNode.left);
+    }
+  }
+
+  getMax() {
+    if (this.right) {
+      return this.right.getMax();
+    }
+    return this.root;
+  }
+  getMin() {
+    if (this.left) {
+      return this.left.getMin();
+    }
+    return this.root;
   }
 }
 
