@@ -1,4 +1,4 @@
-const { BinaryTree } = require("../src/BinaryTree");
+const BinaryTree = require("../src/BinaryTree");
 
 test("Test BinaryTree initial state", () => {
   const firstRootValue = 100;

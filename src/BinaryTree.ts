@@ -1,8 +1,12 @@
-class BinaryTree {
-  constructor(root = null, left = null, right = null) {
-    this.root = root;
-    this.left = left;
-    this.right = right;
+export default class BinaryTree {
+  constructor(
+    public root: number | null = null,
+    public left: BinaryTree | null = null,
+    public right: BinaryTree | null = null
+  ) {
+    // this.root = root;
+    // this.left = left;
+    // this.right = right;
   }
 
   addValue(value) {
@@ -26,7 +30,7 @@ class BinaryTree {
     }
   }
 
-  contains(value) {
+  contains(value: number) {
     if (this.root === value) return true;
     if (this.root > value) {
       if (this.left !== null) {
@@ -54,5 +58,3 @@ class BinaryTree {
     }
   }
 }
-
-module.exports = { BinaryTree };
